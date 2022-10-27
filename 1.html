@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Галерея</title>
+  <link rel="stylesheet" href="gallery.css">
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <p><img id="bPic" src="https://funart.pro/uploads/posts/2021-04/thumbs/1618518158_12-funart_pro-p-oboi-fon-sinii-fon-bez-nichego-12.jpg" alt="Image 1"></p>
+
+  <ul id="smPic">
+    <li>
+      <a href="1618518158_12-funart_pro-p-oboi-fon-sinii-fon-bez-nichego-12.jpg" title="Image 2"><img src="1618518158_12-funart_pro-p-oboi-fon-sinii-fon-bez-nichego-12.jpg"></a>
+    </li>
+    <li>
+      <a href="https://confitur.com.ua/images/photos/small/shop21441.jpg" title="Image 3"><img src="https://confitur.com.ua/images/photos/small/shop21441.jpg"></a>
+    </li>
+    <li>
+      <a href="http://mt1.google.com/vt/lyrs=m@129&hl=ru&x=11&y=0&z=4&s=Galileo" title="Image 4"><img src="http://mt1.google.com/vt/lyrs=m@129&hl=ru&x=11&y=0&z=4&s=Galileo"></a>
+    </li>
+    <li>
+      <a href="https://core-renderer-tiles.maps.yandex.net/tiles?l=map&v=22.09.20-0-b220819125430&x=568&y=323&z=10&scale=1&lang=ru_RU&ads=enabled" title="Image 5"><img src="https://core-renderer-tiles.maps.yandex.net/tiles?l=map&v=22.09.20-0-b220819125430&x=568&y=323&z=10&scale=1&lang=ru_RU&ads=enabled"></a>
+    </li>
+    <li>
+      <a href="https://tms0.visicom.ua/2.0.0/planet3/base_ru/10/612/659.png" title="Image 6"><img src="https://tms0.visicom.ua/2.0.0/planet3/base_ru/10/612/659.png"></a>
+    </li>
+  </ul>
+
+  <script>
+    smPic.onclick = function(event) {
+      let smallpic = event.target.closest('a');
+
+      if (!smallpic) return;
+      showSmallPic(smallpic.href, smallpic.title);
+      event.preventDefault();
+    }
+
+    function showSmallPic(href, title) {
+      bPic.src = href;
+      bPic.alt = title;
+    }
+  </script>
+
+</body>
+</html>
